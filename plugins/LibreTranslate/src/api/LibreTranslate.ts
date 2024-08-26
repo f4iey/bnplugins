@@ -2,7 +2,7 @@ import { LTResponse } from "../type"
 
 const API_URL = "https://tr.f4iey.fr/translate"
 
-const translate = async (text: string, source_lang: string = "auto", target_lang: string, original: boolean = false) => {
+const translate = async (q: string, source: string = "auto", target: string, format: string = "text", alternatives: int = 3, api_key: string) => {
     try {
         if (original) return { source_lang, text }
         const data: LTResponse = await (await fetch(API_URL, {
@@ -11,12 +11,12 @@ const translate = async (text: string, source_lang: string = "auto", target_lang
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                text,
-                source_lang,
-                target_lang,
-                format: "text",
-                alternatives: 3,
-                api_key: ""
+                q,
+                source,
+                target,
+                format,
+                alternatives,
+                api_key
             })
         })).json()
         //if (data.code !== 200) throw Error(`Failed to translate text from LibreTranslate instance: ${data.message}`)
