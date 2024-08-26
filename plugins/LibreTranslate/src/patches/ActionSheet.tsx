@@ -55,7 +55,7 @@ export default () => before("openLazy", LazyActionSheet, ([component, key, msg])
                     const target_lang = settings.target_lang
                     const isTranslated = translateType === "Translate"
 
-                    const translate = await LibreTranslate.translate(originalMessage.content, undefined, target_lang, !isTranslated)
+                    const translate = await LibreTranslate.translate(originalMessage.content, undefined, target_lang, "text", 3, "")
 
                     FluxDispatcher.dispatch({
                         type: "MESSAGE_UPDATE",
