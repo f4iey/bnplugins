@@ -1,0 +1,14 @@
+{
+    "name": "LibreTranslate",
+    "description": "A translation plugin using LibreTranslate instances",
+    "authors": [
+        {
+            "name": "f4iey",
+            "id": "685120065896841259"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_locale_24px"
+    }
+}
