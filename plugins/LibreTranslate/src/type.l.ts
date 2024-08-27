@@ -1,4 +1,8 @@
 export interface LTResponse {
-    alternatives?: string[]
-    translatedtext?: string
-}
+    alternatives?: string[],
+    detectedLanguage?: {
+        confidence?: number,
+        language?: string
+    },
+    translatedText?: string
+ }
