@@ -4,7 +4,6 @@ const API_URL = "https://tr.f4iey.fr/translate"
 
 const translate = async (q: string, source: string = "auto", target: string, format: string = "text", alternatives: number = 3, api_key: string) => {
     try {
-        if (original) return { source_lang, text }
         const data: LTResponse = await (await fetch(API_URL, {
             method: "POST",
             headers: {
