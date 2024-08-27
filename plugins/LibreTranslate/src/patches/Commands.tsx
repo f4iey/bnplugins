@@ -48,7 +48,7 @@ export default () => registerCommand({
     async execute(args, ctx) {
         const [text, lang] = args
         try {
-            const content = await LibreTranslate.translate(text.value, null, lang.value)
+            const content = await LibreTranslate.translate(text.value, null, lang.value, "text", 3, "")
             return await new Promise((resolve): void => showConfirmationAlert({
                 title: "Are you sure you want to send it?",
                 content: (
