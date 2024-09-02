@@ -52,7 +52,7 @@ export default () => before("openLazy", LazyActionSheet, ([component, key, msg])
 
             const translate = async () => {
                 try {
-                    const target_lang = settings.target_lang
+                    const target_lang = settings.target
                     const isTranslated = translateType === "Translate"
 
                     const translate = await LibreTranslate.translate(originalMessage.content, undefined, target_lang, "text", 3, "")

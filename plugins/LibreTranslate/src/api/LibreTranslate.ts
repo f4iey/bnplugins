@@ -19,7 +19,7 @@ const translate = async (q: string, source: string = "auto", target: string, for
             })
         })).json()
         //if (data.code !== 200) throw Error(`Failed to translate text from LibreTranslate instance: ${data.message}`)
-        return { source_lang, text: data.translatedText }
+        return { source, text: data.translatedText }
     } catch (e) {
         throw Error(`Failed to fetch from LibreTranslate instance: ${e}`)
     }

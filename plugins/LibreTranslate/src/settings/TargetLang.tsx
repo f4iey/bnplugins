@@ -25,8 +25,8 @@ export default () => {
                 label={key}
                 trailing={() => <FormRow.Arrow />}
                 onPress={() => {
-                    if (settings.target_lang == value) return
-                    settings.target_lang = value
+                    if (settings.target == value) return
+                    settings.target = value
                     showToast(`Saved ToLang to ${key}`, getAssetIDByName("check"))
                 }}
             />)
